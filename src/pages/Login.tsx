@@ -15,7 +15,9 @@ function Login() {
     e.preventDefault()
 
     try{
-      await AuthService.loginUser(form.email, form.password)
+     const response= await AuthService.loginUser(form.email, form.password)
+     console.log(response);
+     
       console.log('login successfull')
       setMessage('login successfull')
       console.log(form.email)
