@@ -6,12 +6,12 @@ import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import UserList from "./pages/UserList";
 import Navbar from "./components/Navbar";
+import PaintingList from "./pages/PaintingList";
+import PaintingForm from "./pages/PaintingForm";
+import PaintingDetail from "./pages/PaintingDetail";
 import { Toaster } from "react-hot-toast";
 import Footer from "./components/Footer";
 import CategoryManager from "./pages/CategoryManager";
-import PaintingList from "./pages/PaintingList";
-import PaintingDetail from "./pages/PaintingDetail";
-import PaintingForm from "./pages/PaintingForm";
 
 function App() {
   return (

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 
+
 function Navbar() {
   return (
     
@@ -28,25 +29,25 @@ dark:shadow-md dark:hover:shadow-lg">Get started</button>
   <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar">
     <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-[#FFFAEC] md:dark:bg-[#FFFAEC] dark:border-[#FFFAEC]">
       <li>
-        <Link to="/" className="block py-2 px-3 text-[#3D3D3D] bg-blue-700 rounded-sm md:bg-transparent  md:p-0 md:dark:text-[#3D3D3D]" aria-current="page">HOME</Link>
+        <Link to="/" className="font-serif block py-2 px-3 text-[#3D3D3D] bg-blue-700 rounded-sm md:bg-transparent  md:p-0 md:dark:text-[#3D3D3D]" aria-current="page">HOME</Link>
       </li>
       <li>
-        <Link to="/login" className="block py-2 px-3  rounded-sm hover:bg-gray-100 md:hover:bg-transparent  md:p-0 md:dark:hover:text-[#787878] dark:text-[#3D3D3D] dark:hover:bg-[#787878] dark:hover:text-[#787878] md:dark:hover:bg-transparent dark:border-gray-700">LOGIN</Link>
+        <Link to="/login" className="font-serif block py-2 px-3  rounded-sm hover:bg-gray-100 md:hover:bg-transparent  md:p-0 md:dark:hover:text-[#787878] dark:text-[#3D3D3D] dark:hover:bg-[#787878] dark:hover:text-[#787878] md:dark:hover:bg-transparent dark:border-gray-700">LOGIN</Link>
       </li>
       <li>
-        <Link to="/register" className="block py-2 px-3  rounded-sm hover:bg-gray-100 md:hover:bg-transparent  md:p-0 md:dark:hover:text-[#787878] dark:text-[#3D3D3D] dark:hover:bg-gray-700 dark:hover:text-[#787878] md:dark:hover:bg-transparent dark:border-gray-700">REGRISTO</Link>
+        <Link to="/register" className="font-serif block py-2 px-3  rounded-sm hover:bg-gray-100 md:hover:bg-transparent  md:p-0 md:dark:hover:text-[#787878] dark:text-[#3D3D3D] dark:hover:bg-gray-700 dark:hover:text-[#787878] md:dark:hover:bg-transparent dark:border-gray-700">REGRISTO</Link>
       </li>
       <li>
-        <Link to="/profile" className="block py-2 px-3  rounded-sm hover:bg-gray-100 md:hover:bg-transparent  md:p-0 md:dark:hover:text-[#787878] dark:text-[#3D3D3D] dark:hover:bg-gray-700 dark:hover:text-[#787878] md:dark:hover:bg-transparent dark:border-gray-700">PROFILE</Link>
+        <Link to="/profile" className="font-serif block py-2 px-3  rounded-sm hover:bg-gray-100 md:hover:bg-transparent  md:p-0 md:dark:hover:text-[#787878] dark:text-[#3D3D3D] dark:hover:bg-gray-700 dark:hover:text-[#787878] md:dark:hover:bg-transparent dark:border-gray-700">PROFILE</Link>
       </li>
       <li>
-        <Link to="/userList" className="block py-2 px-3  rounded-sm hover:bg-gray-100 md:hover:bg-transparent  md:p-0 md:dark:hover:text-[#787878] dark:text-[#3D3D3D] dark:hover:bg-gray-700 dark:hover:text-[#787878] md:dark:hover:bg-transparent dark:border-gray-700">USUARIOS</Link>
+        <Link to="/userList" className="font-serif block py-2 px-3  rounded-sm hover:bg-gray-100 md:hover:bg-transparent  md:p-0 md:dark:hover:text-[#787878] dark:text-[#3D3D3D] dark:hover:bg-gray-700 dark:hover:text-[#787878] md:dark:hover:bg-transparent dark:border-gray-700">USUARIOS</Link>
       </li>
       <li>
-        <Link to="/paintings" className="block py-2 px-3  rounded-sm hover:bg-gray-100 md:hover:bg-transparent  md:p-0 md:dark:hover:text-[#787878] dark:text-[#3D3D3D] dark:hover:bg-gray-700 dark:hover:text-[#787878] md:dark:hover:bg-transparent dark:border-gray-700">CUADROS</Link>
+        <Link to="/paintings" className="font-serif block py-2 px-3  rounded-sm hover:bg-gray-100 md:hover:bg-transparent  md:p-0 md:dark:hover:text-[#787878] dark:text-[#3D3D3D] dark:hover:bg-gray-700 dark:hover:text-[#787878] md:dark:hover:bg-transparent dark:border-gray-700">CUADROS</Link>
       </li>
       <li>
-        <Link to="/categories" className="block py-2 px-3  rounded-sm hover:bg-gray-100 md:hover:bg-transparent  md:p-0 md:dark:hover:text-[#787878] dark:text-[#3D3D3D] dark:hover:bg-gray-700 dark:hover:text-[#787878] md:dark:hover:bg-transparent dark:border-gray-700">CATEGORIAS</Link>
+        <Link to="/categories" className="font-serif block py-2 px-3  rounded-sm hover:bg-gray-100 md:hover:bg-transparent  md:p-0 md:dark:hover:text-[#787878] dark:text-[#3D3D3D] dark:hover:bg-gray-700 dark:hover:text-[#787878] md:dark:hover:bg-transparent dark:border-gray-700">CATEGORIAS</Link>
       </li>
     </ul>
   </div>

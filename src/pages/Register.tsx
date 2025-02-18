@@ -66,42 +66,44 @@ const Register: React.FC = () => {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <form className="max-w-sm mx-auto min-w-sm" onSubmit={handleSubmit}>
-      <InputForm text="Nombre" name="name" value={form.name || ''} handleChange={handleChange} error={errors.name} /> 
-      <InputForm text="Apellidos" name="surname" value={form.surname || ''} handleChange={handleChange} error={errors.surname} /> 
-      <InputForm text="Email" name="email" value={form.email || ''} handleChange={handleChange} error={errors.email} /> 
-      <InputForm text="Password" name="password" value={form.password || ''} handleChange={handleChange} error={errors.password} /> 
-
-      <div className="flex items-start mb-5">
-        <div className="flex items-center h-5">
+    <div className="flex justify-center items-center min-h-screen w-full bg-[#F5ECD5] px-4">
+      <form className="bg-white shadow-lg rounded-xl p-6 w-full max-w-md" onSubmit={handleSubmit}>
+        <h2 className="font-serif text-2xl font-semibold text-gray-800 text-center mb-4">REGISTRO</h2>
+        
+        <InputForm text="Nombre" name="name" value={form.name || ''} handleChange={handleChange} error={errors.name} />
+        <InputForm text="Apellidos" name="surname" value={form.surname || ''} handleChange={handleChange} error={errors.surname} />
+        <InputForm text="Email" name="email" value={form.email || ''} handleChange={handleChange} error={errors.email} />
+        <InputForm text="Password" name="password" value={form.password || ''} handleChange={handleChange} error={errors.password} />
+  
+        <div className="flex items-center gap-2 mt-4">
           <input
             id="acceptNotifications"
             name="accepNotifications"
             type="checkbox"
             value={form.accepNotifications ? "on" : "off"}
             onChange={handleChangeCheckbox}
-            className="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+            className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded-md focus:ring-[#3D3D3D]"
           />
+          <label htmlFor="acceptNotifications" className="text-sm text-gray-700">
+            Aceptas recibir notificaciones?
+          </label>
         </div>
-       
-        <label
-          htmlFor="remember"
-          className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+        {errors.accepNotifications && (
+          <p className="mt-1 text-sm text-red-500">{errors.accepNotifications}</p>
+        )}
+  
+        {errors?.message && <p className="text-center mt-4 text-red-500">{errors.message}</p>}
+  
+        <button
+          type="submit"
+          className="mt-4 w-full bg-[#578E7E] hover:bg-[#3D3D3D] text-white font-medium rounded-lg text-sm px-5 py-2.5 transition-all duration-200 shadow-md"
         >
-          Aceptas recibir notificaciones?
-        </label>
-        {errors.accepNotifications && <p className="mt-2 text-sm text-red-600 dark:text-red-500"> {errors.accepNotifications}</p> }
-
-      </div>
-      {errors && errors.message && <p className="text-center mt-4 text-red-500">{errors.message}</p>}
-      <button
-        type="submit"
-        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-      >
-        Submit
-      </button>
-    </form>
+          Enviar
+        </button>
+      </form>
+    </div>
   );
+  
 };
 
 export default Register;
