@@ -9,10 +9,9 @@ import InputForm from "../components/InputForm";
 const Register: React.FC = () => {
   const [form, setForm] = useState<Partial<User>>({
     name: "",
-    surname: "",
     email: "",
     password: "",
-    accepNotifications: false,
+    acceptNotifications: false,
   });
   const [errors, setErrors] = useState<Record<string, string | undefined>>({});
   const [loading, setLoading] = useState(false);
@@ -71,7 +70,6 @@ const Register: React.FC = () => {
         <h2 className="font-serif text-2xl font-semibold text-gray-800 text-center mb-4">REGISTRO</h2>
         
         <InputForm text="Nombre" name="name" value={form.name || ''} handleChange={handleChange} error={errors.name} />
-        <InputForm text="Apellidos" name="surname" value={form.surname || ''} handleChange={handleChange} error={errors.surname} />
         <InputForm text="Email" name="email" value={form.email || ''} handleChange={handleChange} error={errors.email} />
         <InputForm text="Password" name="password" value={form.password || ''} handleChange={handleChange} error={errors.password} />
   
@@ -80,7 +78,7 @@ const Register: React.FC = () => {
             id="acceptNotifications"
             name="accepNotifications"
             type="checkbox"
-            value={form.accepNotifications ? "on" : "off"}
+            value={form.acceptNotifications ? "on" : "off"}
             onChange={handleChangeCheckbox}
             className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded-md focus:ring-[#3D3D3D]"
           />
