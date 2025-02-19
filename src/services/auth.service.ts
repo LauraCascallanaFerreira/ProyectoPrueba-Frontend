@@ -16,7 +16,9 @@ export class AuthService {
     }
 
     static async loginUser(email: string, password: string) {
-      return await fetchAPI(API_URL_BASE+'/auth/login', {
+        console.log(API_URL_BASE)
+        return await fetchAPI(API_URL_BASE+'/auth/login', {
+        
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
