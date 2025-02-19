@@ -11,7 +11,7 @@ const Register: React.FC = () => {
     name: "",
     email: "",
     password: "",
-    acceptNotifications: false,
+    acceptNotifications: true,
   });
   const [errors, setErrors] = useState<Record<string, string | undefined>>({});
   const [loading, setLoading] = useState(false);
