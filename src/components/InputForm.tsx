@@ -20,9 +20,9 @@ function InputForm({text, name, value,checked, handleChange, error, placeholder=
       </label>
       <input
         value={value}
-        checked={checked}
+          checked={checked}
         onChange={handleChange}
-        type={type}
+          type={type}
         name={name}
         id={name}
         className="w-full p-2.5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm hover:bg-gray-100 transition-all duration-200"

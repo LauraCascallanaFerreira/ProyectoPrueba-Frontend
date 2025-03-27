@@ -35,9 +35,9 @@ function Login() {
 
 
   return (
-    <div className="flex justify-center items-center min-h-screen w-full bg-[#F5ECD5] p-4">
+    <div className="flex justify-center items-center min-h-screen w-full bg-[#FFFAEC] p-4">
       <form className="w-full max-w-md bg-white shadow-lg rounded-2xl p-6" onSubmit={handleSubmit}>
-        <h2 className="text-2xl font-serif font-semibold text-gray-900 text-center mb-6">LOGIN</h2>
+        <h2 className="text-2xl font-serif font-semibold text-[#E17564] text-center mb-6">LOGIN</h2>
         <div className="mb-4">
           <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
           <input 
@@ -75,7 +75,7 @@ function Login() {
         </div>
         <button 
           type="submit" 
-          className="w-full bg-[#578E7E] hover:bg-[#3D3D3D] text-white font-medium py-3 rounded-lg shadow-md transition-all">
+          className="w-full bg-[#be3144b3] hover:bg-[#df4358ab] text-white font-medium py-3 rounded-lg shadow-md transition-all">
           Submit
         </button>
         {message}

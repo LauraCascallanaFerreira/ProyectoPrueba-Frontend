@@ -3,5 +3,7 @@ export default interface User{
     name: string
     email: string
     password: string
+    active: boolean
     acceptNotifications: boolean
+    role: string
 }

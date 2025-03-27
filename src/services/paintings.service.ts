@@ -28,6 +28,7 @@ export class PaintingService{
     }
 
     static async create(painting: Partial<Painting>) {
+        
         return await fetchAPI(API_URL_BASE+'/paintings', {
             method: 'POST',
             headers: {

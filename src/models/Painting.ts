@@ -1,5 +1,6 @@
 export default interface Painting{
     id: number
+    author: string
     title: string
     description?: string
     active: boolean

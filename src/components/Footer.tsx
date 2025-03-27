@@ -1,7 +1,8 @@
 function Footer() {
     return (
   
-  <footer className="bg-[#FFFAEC] rounded-lg shadow-sm m-4 dark:bg-[#FFFAEC]">
+<div className="bg-[#F5ECD5] w-full">
+  <footer className="bg-[#F5ECD5] rounded-lg shadow-sm m-4 dark:bg-[#F5ECD5] ">
       <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
         <span className="text-sm text-[#3D3D3D] sm:text-center dark:text-[#3D3D3D]">© 2025 <a href="https://flowbite.com/" className="hover:underline">Laura Cascallana Ferreira™</a>. All Rights Reserved.
       </span>
@@ -21,7 +22,7 @@ function Footer() {
       </ul>
       </div>
   </footer>
-  
+  </div>
     )
   }
   

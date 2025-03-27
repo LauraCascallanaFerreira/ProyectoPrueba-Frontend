@@ -65,9 +65,9 @@ const Register: React.FC = () => {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <div className="flex justify-center items-center min-h-screen w-full bg-[#F5ECD5] px-4">
+    <div className="flex justify-center items-center min-h-screen w-full bg-[#FFFAEC] px-4">
       <form className="bg-white shadow-lg rounded-xl p-6 w-full max-w-md" onSubmit={handleSubmit}>
-        <h2 className="font-serif text-2xl font-semibold text-gray-800 text-center mb-4">REGISTRO</h2>
+        <h2 className="font-serif text-2xl font-semibold text-[#E17564] text-center mb-4">REGISTRO</h2>
         
         <InputForm text="Nombre" name="name" value={form.name || ''} handleChange={handleChange} error={errors.name} />
         <InputForm text="Email" name="email" value={form.email || ''} handleChange={handleChange} error={errors.email} />
@@ -76,7 +76,7 @@ const Register: React.FC = () => {
         <div className="flex items-center gap-2 mt-4">
           <input
             id="acceptNotifications"
-            name="accepNotifications"
+            name="acceptNotifications"
             type="checkbox"
             value={form.acceptNotifications ? "on" : "off"}
             onChange={handleChangeCheckbox}
@@ -86,15 +86,15 @@ const Register: React.FC = () => {
             Aceptas recibir notificaciones?
           </label>
         </div>
-        {errors.accepNotifications && (
-          <p className="mt-1 text-sm text-red-500">{errors.accepNotifications}</p>
+        {errors.acceptNotifications && (
+          <p className="mt-1 text-sm text-red-500">{errors.acceptNotifications}</p>
         )}
   
         {errors?.message && <p className="text-center mt-4 text-red-500">{errors.message}</p>}
   
         <button
           type="submit"
-          className="mt-4 w-full bg-[#578E7E] hover:bg-[#3D3D3D] text-white font-medium rounded-lg text-sm px-5 py-2.5 transition-all duration-200 shadow-md"
+          className="mt-4 w-full bg-[#be3144b3] hover:bg-[#df4358ab] text-white font-medium rounded-lg text-sm px-5 py-2.5 transition-all duration-200 shadow-md"
         >
           Enviar
         </button>

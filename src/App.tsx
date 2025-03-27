@@ -12,6 +12,8 @@ import PaintingDetail from "./pages/PaintingDetail";
 import { Toaster } from "react-hot-toast";
 import Footer from "./components/Footer";
 import CategoryManager from "./pages/CategoryManager";
+import SuggestionForm from "./pages/SuggestionForm";
+import SuggestionList from "./pages/SuggestionList";
 
 function App() {
   return (
@@ -31,6 +33,12 @@ function App() {
               <Route path="/paintings/:id" element={<PaintingDetail />} />
               <Route path="/paintings/new" element={<PaintingForm />} />
               <Route path="/paintings/edit/:id" element={<PaintingForm />} />
+
+
+              <Route path="/suggestions" element={<SuggestionList />} />
+              <Route path="/suggestions/new" element={<SuggestionForm />} />
+              <Route path="/suggestions/edit/:id" element={<SuggestionForm />} />
+
               <Route path="/categories" element={<CategoryManager />} />
             </Routes>
           </div>
