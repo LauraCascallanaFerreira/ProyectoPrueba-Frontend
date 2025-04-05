@@ -36,14 +36,14 @@ function UserList() {
   
 
   return (
-    <div className="min-h-screen bg-[#FFFAEC] flex flex-col items-center justify-start p-4 w-full">
-      <h1 className="text-[#E17564] text-6xl font-bold font-serif leading-tight mb-6 text-center">
+    <div className="min-h-screen bg-[#F2C3A7] flex flex-col items-center justify-start p-4 w-full">
+      <h1 className="text-[#400D0D] text-6xl font-bold font-serif leading-tight mb-6 text-center">
         LISTADO DE USUARIOS ACTIVOS
       </h1>
       <div className="relative overflow-x-auto shadow-lg rounded-lg">
         {message}
         <table className="w-full text-sm text-left rtl:text-right text-gray-600 dark:text-gray-300">
-          <thead className="text-xs text-white uppercase bg-[#be3144b3] dark:bg-[#be3144b3]">
+          <thead className="text-xs text-white uppercase bg-[#400D0D] dark:bg-[#400D0D]">
             <tr>
               <th scope="col" className="px-6 py-4">Nombre</th>
               <th scope="col" className="px-6 py-4">Email</th>

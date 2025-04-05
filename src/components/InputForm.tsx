@@ -14,7 +14,7 @@ function InputForm({text, name, value,checked, handleChange, error, placeholder=
     <div className="mb-4 space-y-1">
       <label
         htmlFor={name}
-        className="block text-sm font-medium text-gray-700"
+        className="block text-sm font-medium text-[#400D0D]"
       >
         {text}
       </label>
@@ -25,7 +25,7 @@ function InputForm({text, name, value,checked, handleChange, error, placeholder=
           type={type}
         name={name}
         id={name}
-        className="w-full p-2.5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm hover:bg-gray-100 transition-all duration-200"
+        className="w-full p-2.5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#400D0D] focus:border-[#400D0D] shadow-sm hover:bg-gray-100 transition-all duration-200"
         placeholder={placeholder}
       />
       {error && <p className="text-sm text-red-500">{error}</p>}

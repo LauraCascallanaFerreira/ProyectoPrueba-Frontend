@@ -35,31 +35,31 @@ function Login() {
 
 
   return (
-    <div className="flex justify-center items-center min-h-screen w-full bg-[#FFFAEC] p-4">
+    <div className="flex justify-center items-center min-h-screen w-full p-4" style={{ backgroundImage: "url('/src/img/fondo.png')" }}>
       <form className="w-full max-w-md bg-white shadow-lg rounded-2xl p-6" onSubmit={handleSubmit}>
-        <h2 className="text-2xl font-serif font-semibold text-[#E17564] text-center mb-6">LOGIN</h2>
+        <h2 className="text-2xl font-serif font-semibold text-[#400D0D] text-center mb-6">LOGIN</h2>
         <div className="mb-4">
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+          <label htmlFor="email" className="block text-sm font-medium text-[#400D0D]">Email</label>
           <input 
             type="email" 
             name="email" 
             value={form.email} 
             onChange={handleChange} 
             id="email" 
-            className="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-[#3D3D3D] focus:border-[#3D3D3D]" 
+            className="mt-1 block w-full p-3 border border-[gray-300] rounded-lg shadow-sm focus:ring-[#400D0D] focus:border-[#400D0D]" 
             placeholder="name@example.com" 
             required 
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
+          <label htmlFor="password" className="block text-sm font-medium text-[#400D0D]">Password</label>
           <input 
             type="password" 
             name="password" 
             value={form.password} 
             onChange={handleChange} 
             id="password" 
-            className="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-[#3D3D3D] focus:border-[#3D3D3D]" 
+            className="mt-1 block w-full p-3 border border-[gray-300] rounded-lg shadow-sm focus:ring-[#400D0D] focus:border-[#400D0D]" 
             required 
           />
         </div>
@@ -68,14 +68,14 @@ function Login() {
             <input 
               id="remember" 
               type="checkbox" 
-              className="w-4 h-4 text-[#578E7E] border-gray-300 rounded focus:ring-[#578E7E]" 
+              className="w-4 h-4 text-[#578E7E] border-[gray-300] rounded focus:rin g-[#578E7E]" 
             />
-            <label htmlFor="remember" className="ml-2 text-sm text-gray-700">Remember me</label>
+            <label htmlFor="remember" className="ml-2 text-sm text-[#400D0D]">Remember me</label>
           </div>
         </div>
         <button 
           type="submit" 
-          className="w-full bg-[#be3144b3] hover:bg-[#df4358ab] text-white font-medium py-3 rounded-lg shadow-md transition-all">
+          className="w-full bg-[#400D0D] hover:bg-[#A66953] text-white font-medium py-3 rounded-lg shadow-md transition-all">
           Submit
         </button>
         {message}

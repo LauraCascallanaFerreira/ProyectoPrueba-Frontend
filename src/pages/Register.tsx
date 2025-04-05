@@ -65,13 +65,20 @@ const Register: React.FC = () => {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <div className="flex justify-center items-center min-h-screen w-full bg-[#FFFAEC] px-4">
+    <div className="flex justify-center items-center min-h-screen w-full px-4"  style={{ backgroundImage: "url('/src/img/fondo.png')" }}>
       <form className="bg-white shadow-lg rounded-xl p-6 w-full max-w-md" onSubmit={handleSubmit}>
-        <h2 className="font-serif text-2xl font-semibold text-[#E17564] text-center mb-4">REGISTRO</h2>
+        <h2 className="font-serif text-2xl font-semibold text-[#400D0D] text-center mb-4">REGISTRO</h2>
         
         <InputForm text="Nombre" name="name" value={form.name || ''} handleChange={handleChange} error={errors.name} />
         <InputForm text="Email" name="email" value={form.email || ''} handleChange={handleChange} error={errors.email} />
-        <InputForm text="Password" name="password" value={form.password || ''} handleChange={handleChange} error={errors.password} />
+        <InputForm 
+        text="Password" 
+        name="password" 
+        type="password" // Agregamos el tipo de input como 'password'
+        value={form.password || ''} 
+        handleChange={handleChange} 
+        error={errors.password} 
+      />
   
         <div className="flex items-center gap-2 mt-4">
           <input
@@ -94,7 +101,7 @@ const Register: React.FC = () => {
   
         <button
           type="submit"
-          className="mt-4 w-full bg-[#be3144b3] hover:bg-[#df4358ab] text-white font-medium rounded-lg text-sm px-5 py-2.5 transition-all duration-200 shadow-md"
+          className="mt-4 w-full bg-[#400D0D] hover:bg-[#A66953] text-white font-medium rounded-lg text-sm px-5 py-2.5 transition-all duration-200 shadow-md"
         >
           Enviar
         </button>

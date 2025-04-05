@@ -8,8 +8,8 @@ interface CategoryFormProps{
 function CategoryForm({onSubmit}:CategoryFormProps) {
     const [name, setName] = useState('')
     return (
-        <form onSubmit={(e) => onSubmit(e, name)} className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md max-w-md mx-auto flex flex-col gap-4">
-            <label htmlFor="name" className="text-lg font-semibold text-gray-800 dark:text-white">
+        <form onSubmit={(e) => onSubmit(e, name)} className="bg-[gray-100] dark:bg-gray-800 p-6 rounded-lg shadow-md max-w-md mx-auto flex flex-col gap-4">
+            <label htmlFor="name" className="text-lg font-semibold text-[#400D0D] dark:text-[#400D0D]">
                 Nombre:
             </label>
             <input 
@@ -17,9 +17,9 @@ function CategoryForm({onSubmit}:CategoryFormProps) {
                 name="name" 
                 value={name} 
                 onChange={(e) => setName(e.target.value)}
-                className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#578E7E] dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#400D0D] dark:bg-[#400D0D] dark:border-[#400D0D] dark:text-[#400D0D]"
             />
-            <button className="bg-[#578E7E] text-white font-semibold py-3 rounded-lg shadow-md hover:bg-[#3D3D3D] transition duration-300">
+            <button className="bg-[#400D0D] text-white font-semibold py-3 rounded-lg shadow-md hover:bg-[#A66953] transition duration-300">
                 Guardar
             </button>
         </form>
@@ -32,14 +32,19 @@ interface CategoryListProps{
 }
 function CategoryList({categories, onDelete}: CategoryListProps) {
     return (
-        <div className="text-white">
-        {categories.map(category =>  
-            <div key={category.id}>
-                {category.name} -
-                <button onClick={()=>onDelete(category.id)}>Borrar</button>
-            </div>
-        )}
+        <div className="text-white bg-[#F2C3A7] p-6 rounded-lg shadow-lg">
+            {categories.map(category => (
+        <div key={category.id} className="flex justify-between items-center py-2 border-b border-white last:border-b-0">
+            <span className="text-black font-semibold text-lg">{category.name}</span>
+            <button 
+                onClick={() => onDelete(category.id)} 
+                className="bg-[#400D0D] text-white py-1 px-3 rounded hover:bg-[#A66953] focus:outline-none focus:ring-2 focus:ring-[#A66953]"
+            >
+                Borrar
+            </button>
         </div>
+    ))}
+</div>
     )
 }
 
@@ -67,9 +72,9 @@ function CategoryManager() {
     }
     
     return (
-        <div className="bg-[#FFFAEC] min-h-screen flex items-center justify-center p-6 w-full">
-            <div className="max-w-4xl w-full p-10 bg-white dark:bg-gray-900 rounded-2xl shadow-2xl">
-                <h1 className="text-5xl font-extrabold text-gray-800 dark:text-white text-center mb-8">
+        <div className="min-h-screen flex items-center justify-center p-6 w-full" style={{ backgroundImage: "url('/src/img/fondo.png')" }}>
+            <div className="max-w-4xl w-full p-10 bg-[#A66953] dark:white rounded-2xl shadow-2xl">
+                <h1 className="text-5xl font-extrabold text-[#400D0D] dark:text-[#400D0D] text-center mb-8">
                     Gestión de categorías
                 </h1>
                 <div className="bg-gray-100 dark:bg-gray-800 p-8 rounded-xl shadow-lg">

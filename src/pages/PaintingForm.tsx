@@ -103,13 +103,13 @@ function PaintingForm() {
   if(loading) return <p>Loading...</p>
 
   return (
-  <div className="text-white flex flex-col items-center p-6 bg-[#FFFAEC] w-full min-h-screen">
-    <h2 className="font-serif text-4xl font-extrabold text-center mb-6 text-[#3D3D3D]">
+  <div className="text-white flex flex-col items-center p-6 w-full min-h-screen"style={{ backgroundImage: "url('/src/img/fondo.png')" }}>
+    <h2 className="font-serif text-4xl font-extrabold text-center mb-6 text-[#400D0D]">
       {id ? "EDICIÓN DE UN CUADRO" : "INSERCIÓN DE UN NUEVO CUADRO"}
     </h2>
 
     <form
-      className="bg-white shadow-lg rounded-xl p-6 w-full max-w-lg space-y-4"
+      className="bg-white shadow-lg rounded-xl p-6 w-full max-w-lg space-y-4 "
       onSubmit={handleSubmit}
     >
       <InputForm
@@ -144,7 +144,7 @@ function PaintingForm() {
         error={errors.contactEmail}
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
         <InputForm
           type="datetime-local"
           text="Fecha publicación:"
@@ -201,7 +201,7 @@ function PaintingForm() {
 
       <button
         type="submit"
-        className="font-serif w-full bg-[#578E7E] hover:bg-[#3D3D3D] text-white font-bold py-2.5 rounded-lg transition-all"
+        className="font-serif w-full bg-[#400D0D] hover:bg-[#A66953] text-white font-bold py-2.5 rounded-lg transition-all"
       >
         Guardar
       </button>
